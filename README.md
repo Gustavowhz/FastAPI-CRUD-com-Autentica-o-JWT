@@ -33,17 +33,27 @@ bash
 git clone https://github.com/Gustavowhz/FastAPI-CRUD-com-Autentica-o-JWT.git
 cd nome-do-repositorio
 
+--- 
+ 
 # Crie e ative o ambiente virtual
 .venv\Scripts\activate
+
+---
 
 # Instale as dependências
 pip install -r requirements.txt
 
+---
+
 # Rodar Localmente
 uvicorn app.main:app --reload
 
+---
+
 # Documentação interativa
 ```http://127.0.0.1:8000/docs```
+
+---
 
 # Funcionalidades
 
@@ -54,6 +64,8 @@ uvicorn app.main:app --reload
  Testes automatizados com Pytest
  Documentação automática
  Deploy-ready
+
+---
 
  Desenvolvido por Gustavo Basilio
 
