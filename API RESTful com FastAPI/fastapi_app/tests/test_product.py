@@ -6,11 +6,9 @@ client = TestClient(app)
 
 @pytest.fixture(scope="module")
 def token_autenticado():
-    # Primeiro, cria um usuário
     usuario_data = {"email": "teste@dominio.com", "senha": "senha123"}
     client.post("/usuarios/", json=usuario_data)
 
-    # Faz login
     login_data = {"username": usuario_data["email"], "password": usuario_data["senha"]}
     response = client.post("/token", data=login_data)
     return response.json()["access_token"]
@@ -20,7 +18,7 @@ def test_criar_usuario():
     usuario_data = {"email": "teste2@dominio.com", "senha": "senha123"}
     response = client.post("/usuarios/", json=usuario_data)
 
-    assert response.status_code == 200 or response.status_code == 400  # Pode já estar criado
+    assert response.status_code == 200 or response.status_code == 400 
     if response.status_code == 200:
         assert response.json()["email"] == usuario_data["email"]
 
