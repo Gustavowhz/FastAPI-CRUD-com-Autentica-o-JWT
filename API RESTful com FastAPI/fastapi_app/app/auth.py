@@ -39,7 +39,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     return user
 def verificar_token(token: str = Depends(oauth2_scheme)):
     try:
-        payload = auth.verificar_token_jwt(token)  # Seu código que valida o token
+        payload = auth.verificar_token_jwt(token) 
         return payload
     except JWTError:
         raise HTTPException(
