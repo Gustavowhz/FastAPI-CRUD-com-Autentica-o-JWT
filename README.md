@@ -26,7 +26,7 @@ Projeto completo de uma API RESTful desenvolvida com [FastAPI](https://fastapi.t
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 bash
 # Clone o repositório
